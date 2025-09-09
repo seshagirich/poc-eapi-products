@@ -1,0 +1,16 @@
+<testExecutions version="1">
+  <file path="src\test\munit\tax-ImplementationFlow-test-suite.xml">
+    <testCase name="tax-ImplementationFlow-test-suite-post:\v1\tax:error" duration="82"/>
+    <testCase name="tax-ImplementationFlow-test-suite-post:\v1\tax:application\json:poc-eapi-products-configTest" duration="58"/>
+  </file>
+  <file path="src\test\munit\customer-ImplementationFlow-test-suite.xml">
+    <testCase name="customer-ImplementationFlow-test-suite-post:\v1\customer:application\json:poc-eapi-products-configTest" duration="643"/>
+  </file>
+  <file path="src\test\munit\price-ImplementationFlow-test-suite.xml">
+    <testCase name="price-ImplementationFlow-test-suite-post:error" duration="65"/>
+    <testCase name="price-ImplementationFlow-test-suite-post:\v1\prices:application\json:poc-eapi-products-configTest" duration="108"/>
+  </file>
+  <file path="src\test\munit\stock-ImplementationFlow-test-suite.xml">
+    <testCase name="stock-ImplementationFlow-test-suite-post:\v1\stock:application\json:poc-eapi-products-configTest" duration="77"/>
+  </file>
+</testExecutions>

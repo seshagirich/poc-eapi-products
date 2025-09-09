@@ -1,0 +1,15 @@
+[
+    {
+        "CITY__c": "Hyderabad",
+        "CUSTOMERID__c": "ABC-001",
+        "STREET__c": "12-3-45, MG Road",
+        "COMPANY__c": "EECOL",
+        "POSTALCODE__c": "500081",
+        "COUNTRY__c": "India",
+        "STATE__c": "Telangana",
+        "Id": null,
+        "CUSTOMERNAME__c": "Ravi",
+        "type": "OnlineCustomers__c",
+        "PHONE__c": "+91-9876543210"
+    }
+]

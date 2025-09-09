@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="tax-ImplementationFlow-test-suite.xml" />
+	<munit:test name="tax-ImplementationFlow-test-suite-post:\v1\tax:application\json:poc-eapi-products-configTest" doc:id="a41da76b-10ce-4bd6-b20b-15c7058cb31e" description="Test">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="06de8443-4818-4e2e-a3a3-81ff6ecf2366" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Tax-Papi-Request" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[MunitTools::getResourceAsString('tax-response.json')]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="3729775d-b261-4ec2-8547-11ffddaee03c" >
+				<munit:payload value='#[{&#10;    "stateCode": "AR"&#10;}]' mediaType="application/json" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to post:\v1\tax:application\json:poc-eapi-products-config" doc:id="edb6d678-f88d-4fb0-98ff-aa1c5084e7bb" name="post:\v1\tax:application\json:poc-eapi-products-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="e63e7919-da25-4c99-9f26-38976d2d9954" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+
+	<munit:test name="tax-ImplementationFlow-test-suite-post:\v1\tax:error" doc:id="3d5804f1-ab39-4be3-ba47-64f3be55d758" description="Test" expectedErrorType="HTTP:BAD_REQUEST">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="3482971a-00ab-4478-a2cd-9c2de6e7160e" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Tax-Papi-Request" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="HTTP:BAD_REQUEST" />
+				</munit-tools:then-return>
+			
+</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="f2db799f-f3d5-49e8-a387-a5dd47c77fb7" >
+				<munit:payload value='#[{&#10;    "stateCode": "AR"&#10;}]' mediaType="application/json" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to post:\v1\tax:application\json:poc-eapi-products-config" doc:id="1f534ac4-b370-4da8-ab7d-07aaa291cba8" name="post:\v1\tax:application\json:poc-eapi-products-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="7d4096ec-1f8f-489a-9308-4184b7179188" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	
+
+</mule>

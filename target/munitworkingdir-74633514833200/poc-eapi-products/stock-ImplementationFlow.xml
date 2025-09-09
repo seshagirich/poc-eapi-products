@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="post:\v1\stock:application\json:poc-eapi-products-config">
+        <logger level="INFO" doc:name="start flow  " doc:id="41794ed2-c62a-4f9c-91c0-de39035cf9c5" message="start flow   #[payload]"/>
+		<flow-ref doc:name="commanStartLoggerSub_Flow" doc:id="f8697e73-565c-4523-9522-f14935fe82a0" name="commanStartLoggerSub_Flow"/>
+		<http:request method="POST" doc:name="Stock papi Request" doc:id="642559b4-b240-4ffd-9b30-182af7ea9883" config-ref="HTTP_Request_configuration" path="${stock-papi.path}">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "222",
+	"client_id" : "111"
+}]]]></http:headers>
+		</http:request>
+		<flow-ref doc:name="commanEndLoggerSub_Flow" doc:id="da06d1d3-3458-4c49-a28a-debb10f15054" name="commanEndLoggerSub_Flow"/>
+		<logger level="INFO" doc:name="end flow" doc:id="af695070-efab-49ed-b603-2fff5da90f63" message="end flow #[payload]"/>
+		<error-handler ref="errorhandlerError_Handler" />
+    
+</flow>
+	
+	</mule>

@@ -1,0 +1,10 @@
+{
+    "productsDetails": [
+        {
+            "price": "500",
+            "stock_keeping_unit_code": "WP2",
+            "qty": "EACH",
+            "productName": "fan"
+        }
+    ]
+}

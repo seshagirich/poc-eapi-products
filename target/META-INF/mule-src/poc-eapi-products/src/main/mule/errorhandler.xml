@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<error-handler name="errorhandlerError_Handler" doc:id="f15477fe-1bd3-4601-8bf4-5f92746ac938" >
+		<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="c7e21fbe-e65d-4849-8df0-2e9545576a05" >
+			<set-variable value="#[error.errorType]" doc:name="Set Variable" doc:id="82b58810-1516-4d6e-876d-4dfaff9be663" variableName="errorType" />
+			<ee:transform doc:name="Transform Message" doc:id="f784dd2a-fc77-45ed-b0d6-babab3b87d73">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+	errorMessage: error.errorMessage,
+	errorDescription: error.description,
+	errorType: error.errorType,
+	correlationId: correlationId
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		</on-error-propagate>
+	</error-handler>
+</mule>

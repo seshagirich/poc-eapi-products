@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	
+	 <flow name="post:\v1\tax:application\json:poc-eapi-products-config">
+        <logger level="INFO" doc:name="start flow " doc:id="0b18b579-e0b4-462d-b993-bee9c4316026" message="start flow #[payload]"/>
+		<flow-ref doc:name="commanStartLoggerSub_Flow" doc:id="887c8966-4d3b-4321-9dd9-c4451cc89e22" name="commanStartLoggerSub_Flow"/>
+		<http:request method="POST" doc:name="Tax-Papi-Request" doc:id="9feee851-701f-4d4f-ab37-f07dcf5cd687" config-ref="HTTP_Request_configuration" path="${tax-papi.path}">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "222",
+	"client_id" : "111"
+}]]]></http:headers>
+		</http:request>
+		<flow-ref doc:name="commanEndLoggerSub_Flow" doc:id="f4971a91-512a-42be-9aaf-ea9b0ffddd8a" name="commanEndLoggerSub_Flow"/>
+		<logger level="INFO" doc:name="end flow " doc:id="475565a9-7703-471c-bcb8-6da6135c19d7" message="end flow #[payload]"/>
+		<error-handler ref="errorhandlerError_Handler" />
+    
+</flow>
+	
+	</mule>

@@ -1,0 +1,167 @@
+{
+  "version": "1.2.0",
+  "artifactCoordinates": {
+    "groupId": "ce6890ad-6542-4201-b89e-c87a21cbb960",
+    "artifactId": "poc-eapi-products",
+    "version": "1.0.4",
+    "type": "jar",
+    "classifier": "mule-application"
+  },
+  "dependencies": [
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.connectors",
+        "artifactId": "mule-http-connector",
+        "version": "1.10.3",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/org/mule/connectors/mule-http-connector/1.10.3/mule-http-connector-1.10.3-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.connectors",
+        "artifactId": "mule-sockets-connector",
+        "version": "1.2.5",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/org/mule/connectors/mule-sockets-connector/1.2.5/mule-sockets-connector-1.2.5-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.modules",
+        "artifactId": "mule-apikit-module",
+        "version": "1.11.3",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/org/mule/modules/mule-apikit-module/1.11.3/mule-apikit-module-1.11.3-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "com.mulesoft.munit",
+        "artifactId": "munit-runner",
+        "version": "3.4.0",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/com/mulesoft/munit/munit-runner/3.4.0/munit-runner-3.4.0-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "com.mulesoft.munit",
+        "artifactId": "munit-tools",
+        "version": "3.4.0",
+        "type": "jar",
+        "classifier": "mule-plugin"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/com/mulesoft/munit/munit-tools/3.4.0/munit-tools-3.4.0-mule-plugin.jar"
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.weave",
+        "artifactId": "assertions",
+        "version": "1.2.1",
+        "type": "jar"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/org/mule/weave/assertions/1.2.1/assertions-1.2.1.jar",
+      "resources": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/maven/org.mule.weave/assertions/pom-default.xml",
+        "META-INF/maven/org.mule.weave/assertions/pom.properties",
+        "META-INF/native-image/org.mule.weave/assertions/resource-config.json",
+        "dw/test/Asserts.dwl",
+        "dw/test/internal/Utils.dwl"
+      ]
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.mule.weave",
+        "artifactId": "wlang",
+        "version": "2.5.0-20221129",
+        "type": "jar"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/org/mule/weave/wlang/2.5.0-20221129/wlang-2.5.0-20221129.jar",
+      "resources": [
+        "META-INF/MANIFEST.MF",
+        "META-INF/maven/org.mule.weave/wlang/pom-default.xml",
+        "META-INF/maven/org.mule.weave/wlang/pom.properties",
+        "META-INF/native-image/org.mule.weave/wlang/resource-config.json",
+        "dw/Core.dwl",
+        "dw/Crypto.dwl",
+        "dw/Runtime.dwl",
+        "dw/System.dwl",
+        "dw/core/Arrays.dwl",
+        "dw/core/Binaries.dwl",
+        "dw/core/Dates.dwl",
+        "dw/core/Numbers.dwl",
+        "dw/core/Objects.dwl",
+        "dw/core/Periods.dwl",
+        "dw/core/Strings.dwl",
+        "dw/core/Types.dwl",
+        "dw/core/URL.dwl",
+        "dw/extension/DataFormat.dwl",
+        "dw/module/Multipart.dwl",
+        "dw/util/Coercions.dwl",
+        "dw/util/Diff.dwl",
+        "dw/util/Math.dwl",
+        "dw/util/Timer.dwl",
+        "dw/util/Tree.dwl",
+        "dw/util/Values.dwl"
+      ]
+    },
+    {
+      "artifactCoordinates": {
+        "groupId": "org.scala-lang",
+        "artifactId": "scala-library",
+        "version": "2.12.10",
+        "type": "jar"
+      },
+      "uri": "file:/C:/Users/siva/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar",
+      "packages": [
+        "scala",
+        "scala.annotation",
+        "scala.annotation.meta",
+        "scala.annotation.unchecked",
+        "scala.beans",
+        "scala.collection",
+        "scala.collection.concurrent",
+        "scala.collection.convert",
+        "scala.collection.generic",
+        "scala.collection.immutable",
+        "scala.collection.mutable",
+        "scala.collection.parallel",
+        "scala.collection.parallel.immutable",
+        "scala.collection.parallel.mutable",
+        "scala.collection.script",
+        "scala.compat",
+        "scala.concurrent",
+        "scala.concurrent.duration",
+        "scala.concurrent.forkjoin",
+        "scala.concurrent.impl",
+        "scala.io",
+        "scala.math",
+        "scala.ref",
+        "scala.reflect",
+        "scala.reflect.macros.internal",
+        "scala.runtime",
+        "scala.runtime.java8",
+        "scala.sys",
+        "scala.sys.process",
+        "scala.text",
+        "scala.util",
+        "scala.util.control",
+        "scala.util.hashing",
+        "scala.util.matching"
+      ],
+      "resources": [
+        "LICENSE",
+        "META-INF/MANIFEST.MF",
+        "NOTICE",
+        "library.properties",
+        "rootdoc.txt"
+      ]
+    }
+  ]
+}

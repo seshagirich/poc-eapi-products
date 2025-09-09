@@ -1,0 +1,8 @@
+%dw 2.0
+
+type auto_1b23bc12_83d3_43ab_9d94_0a76dc33fd09_Output_Variables_endFlow = {|
+  flowName: Null, 
+  status: String, 
+  correlationID: String
+|}
+

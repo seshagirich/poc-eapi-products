@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<sub-flow name="commanStartLoggerSub_Flow" doc:id="3c8465b4-89fe-4b28-b7b0-863a89e998c5" >
+		<set-variable value="#[message.attributes.requestPath]" doc:name="Set Variable" doc:id="3502a8e0-4868-4473-b496-47210318ed04" variableName="flowName"/>
+		<ee:transform doc:name="Transform Message" doc:id="c3ce66e3-93de-4351-a88d-db6129accee7" >
+			<ee:message >
+			</ee:message>
+			<ee:variables >
+				<ee:set-variable variableName="startFlow" ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	flowname: vars.flowName,
+	status: "startFlow",
+	correlationId: correlationId
+}]]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<logger level="INFO" doc:name="vars.startFlow" doc:id="647dfe63-98c6-47ba-a7da-51006c2fe894" message="#[vars.startFlow]"/>
+	</sub-flow>
+	<sub-flow name="commanEndLoggerSub_Flow" doc:id="1b23bc12-83d3-43ab-9d94-0a76dc33fd09" >
+		<set-variable value="#[message.attributes.requestPath]" doc:name="Set Variable" doc:id="54cff636-507a-4b94-8f72-96e2f5eadcb4" variableName="flowName"/>
+		<ee:transform doc:name="Transform Message" doc:id="a2c637f5-8df9-4095-a7b8-5fadef592595" >
+			<ee:message >
+			</ee:message>
+			<ee:variables >
+				<ee:set-variable variableName="endFlow" ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"flowName": vars.flowName,
+	"status": "endFlow",
+	"correlationID": correlationId
+}]]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="81a9622f-1998-4c20-afdf-31414dc628a0" />
+	</sub-flow>
+</mule>

@@ -1,0 +1,16 @@
+{
+  "productsDetails": [
+    {
+      "price": "200",
+      "stock_keeping_unit_code": "WP1",
+      "qty": "EACH",
+      "productName": "bulb"
+    },
+    {
+      "price": "200",
+      "stock_keeping_unit_code": "WP1",
+      "qty": "EACH",
+      "productName": "bulb"
+    }
+  ]
+}

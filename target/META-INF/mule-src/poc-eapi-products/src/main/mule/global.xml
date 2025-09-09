@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	
+	 <http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="41044149-9c17-453a-8358-e4c6aef6527c" >
+		<http:request-connection host="${papi.price-host}" />
+	</http:request-config>
+	
+	<configuration-properties doc:name="Configuration properties" doc:id="fcd8b1ca-98fb-48fa-9a4c-c8f1834272f0" file="dev.yaml" />
+	<http:request-config name="HTTP_Request_configuration-customer-SAPI" doc:name="HTTP Request configuration" doc:id="bbfb0061-d694-42a7-abb2-f08b8fa8a31e" >
+		<http:request-connection host="${customer-sapi.host}" />
+	</http:request-config>
+	
+	
+</mule>

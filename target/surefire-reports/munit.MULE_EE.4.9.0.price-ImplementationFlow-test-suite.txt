@@ -1,0 +1,6 @@
+SUCCESS - Test price-ImplementationFlow-test-suite-post:error finished Successfully.
+SUCCESS - Test price-ImplementationFlow-test-suite-post:\v1\prices:application\json:poc-eapi-products-configTest finished Successfully.
+
+=============================================================================
+Tests run: 2 - Failures: 0 - Errors: 0 - Skipped: 0 - Time elapsed: 0.176 sec
+=============================================================================

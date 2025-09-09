@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="price-ImplementationFlow-test-suite.xml" />
+	<munit:test name="price-ImplementationFlow-test-suite-post:\v1\prices:application\json:poc-eapi-products-configTest" doc:id="1bd29412-16fd-411e-8e0f-50f9ea5c3f96" description="Test">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="2781a7b8-6bfa-4467-a821-d3c4c7ef6239" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="price-papi-Request" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:payload value="#[MunitTools::getResourceAsString('price-response.json')]" mediaType="application/json" />
+				</munit-tools:then-return>
+			</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="a7690d3a-71f6-43f9-872a-e6393ff24277" >
+				<munit:payload value="#[MunitTools::getResourceAsString('price-request.json')]" mediaType="application/json" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to post:\v1\prices:application\json:poc-eapi-products-config" doc:id="ca25b663-84cc-4307-8550-b43a370f6725" name="post:\v1\prices:application\json:poc-eapi-products-config"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="73fbce68-c4eb-48b1-9855-b8b96c4bee3d" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+	<munit:test name="price-ImplementationFlow-test-suite-post:error" doc:id="d772a28f-4424-4223-9510-08c6a941d6ed" description="Test" expectedErrorType="HTTP:BAD_REQUEST">
+		<munit:behavior >
+			<munit-tools:mock-when doc:name="Mock when" doc:id="9801e1f0-cd65-4c4f-8de2-95c21fbb37bc" processor="http:request">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="price-papi-Request" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+				<munit-tools:then-return >
+					<munit-tools:error typeId="HTTP:BAD_REQUEST" />
+				</munit-tools:then-return>
+			
+</munit-tools:mock-when>
+		</munit:behavior>
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="9ac67453-7504-41ea-b9d9-ffb2f4127ac2" >
+				<munit:payload value="#[MunitTools::getResourceAsString('price-request.json')]" mediaType="application/json" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to post:\v1\prices:application\json:poc-eapi-products-config" doc:id="d7df9de5-5a8d-45a6-92eb-cd25cf3384c5" name="post:\v1\prices:application\json:poc-eapi-products-config"/>
+		</munit:execution>
+		<munit:validation>
+			<munit-tools:verify-call doc:name="Verify call" doc:id="05efbdaa-7b0d-409a-9b7d-d99ca646f7a5" processor="ee:transform" atLeast="1">
+				<munit-tools:with-attributes >
+					<munit-tools:with-attribute whereValue="Transform Message" attributeName="doc:name" />
+				</munit-tools:with-attributes>
+			</munit-tools:verify-call>
+
+		</munit:validation>
+	
+</munit:test>
+	
+
+</mule>

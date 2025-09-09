@@ -1,0 +1,400 @@
+{
+  "resources": [
+    {
+      "name": "price-ImplementationFlow.xml",
+      "weight": 12.5,
+      "flows": [
+        {
+          "name": "post:\\v1\\prices:application\\json:poc-eapi-products-config",
+          "type": "FLOW",
+          "locations": [
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 23
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 24
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 15
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 13
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 14
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 23
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 24
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 15
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 13
+            },
+            {
+              "path": "post:\\v1\\prices:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "customer-ImplementationFlow.xml",
+      "weight": 20.0,
+      "flows": [
+        {
+          "name": "post:\\v1\\customer:application\\json:poc-eapi-products-config",
+          "type": "FLOW",
+          "locations": [
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 13
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 22
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/7",
+              "lineNumber": 45
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/6",
+              "lineNumber": 44
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 11
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/5",
+              "lineNumber": 23
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 12
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 14
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 13
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 22
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/7",
+              "lineNumber": 45
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/6",
+              "lineNumber": 44
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 11
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/5",
+              "lineNumber": 23
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 12
+            },
+            {
+              "path": "post:\\v1\\customer:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stock-ImplementationFlow.xml",
+      "weight": 12.5,
+      "flows": [
+        {
+          "name": "post:\\v1\\stock:application\\json:poc-eapi-products-config",
+          "type": "FLOW",
+          "locations": [
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 10
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 11
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 12
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 20
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 21
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 10
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 11
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 12
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 20
+            },
+            {
+              "path": "post:\\v1\\stock:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "commanLogger.xml",
+      "weight": 15.0,
+      "flows": [
+        {
+          "name": "commanStartLoggerSub_Flow",
+          "type": "SUB_FLOW",
+          "locations": [
+            {
+              "path": "commanStartLoggerSub_Flow/processors/0",
+              "lineNumber": 8
+            },
+            {
+              "path": "commanStartLoggerSub_Flow/processors/1",
+              "lineNumber": 9
+            },
+            {
+              "path": "commanStartLoggerSub_Flow/processors/2",
+              "lineNumber": 23
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "commanStartLoggerSub_Flow/processors/0",
+              "lineNumber": 8
+            },
+            {
+              "path": "commanStartLoggerSub_Flow/processors/1",
+              "lineNumber": 9
+            },
+            {
+              "path": "commanStartLoggerSub_Flow/processors/2",
+              "lineNumber": 23
+            }
+          ]
+        },
+        {
+          "name": "commanEndLoggerSub_Flow",
+          "type": "SUB_FLOW",
+          "locations": [
+            {
+              "path": "commanEndLoggerSub_Flow/processors/1",
+              "lineNumber": 27
+            },
+            {
+              "path": "commanEndLoggerSub_Flow/processors/0",
+              "lineNumber": 26
+            },
+            {
+              "path": "commanEndLoggerSub_Flow/processors/2",
+              "lineNumber": 41
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "commanEndLoggerSub_Flow/processors/1",
+              "lineNumber": 27
+            },
+            {
+              "path": "commanEndLoggerSub_Flow/processors/0",
+              "lineNumber": 26
+            },
+            {
+              "path": "commanEndLoggerSub_Flow/processors/2",
+              "lineNumber": 41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "poc-eapi-products.xml",
+      "weight": 22.5,
+      "flows": [
+        {
+          "name": "poc-eapi-products-main",
+          "type": "FLOW",
+          "locations": [
+            {
+              "path": "poc-eapi-products-main/errorHandler/3/processors/0",
+              "lineNumber": 59
+            },
+            {
+              "path": "poc-eapi-products-main/errorHandler/2/processors/0",
+              "lineNumber": 46
+            },
+            {
+              "path": "poc-eapi-products-main/processors/0",
+              "lineNumber": 17
+            },
+            {
+              "path": "poc-eapi-products-main/errorHandler/4/processors/0",
+              "lineNumber": 72
+            },
+            {
+              "path": "poc-eapi-products-main/errorHandler/5/processors/0",
+              "lineNumber": 85
+            },
+            {
+              "path": "poc-eapi-products-main/errorHandler/1/processors/0",
+              "lineNumber": 33
+            },
+            {
+              "path": "poc-eapi-products-main/errorHandler/0/processors/0",
+              "lineNumber": 20
+            }
+          ],
+          "coveredLocations": []
+        },
+        {
+          "name": "poc-eapi-products-console",
+          "type": "FLOW",
+          "locations": [
+            {
+              "path": "poc-eapi-products-console/errorHandler/0/processors/0",
+              "lineNumber": 112
+            },
+            {
+              "path": "poc-eapi-products-console/processors/0",
+              "lineNumber": 109
+            }
+          ],
+          "coveredLocations": []
+        }
+      ]
+    },
+    {
+      "name": "tax-ImplementationFlow.xml",
+      "weight": 12.5,
+      "flows": [
+        {
+          "name": "post:\\v1\\tax:application\\json:poc-eapi-products-config",
+          "type": "FLOW",
+          "locations": [
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 11
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 22
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 13
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 21
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 12
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/0",
+              "lineNumber": 11
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/4",
+              "lineNumber": 22
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/2",
+              "lineNumber": 13
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/3",
+              "lineNumber": 21
+            },
+            {
+              "path": "post:\\v1\\tax:application\\json:poc-eapi-products-config/processors/1",
+              "lineNumber": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "errorhandler.xml",
+      "weight": 5.0,
+      "flows": [
+        {
+          "name": "errorhandlerError_Handler",
+          "type": "ERROR_HANDLER",
+          "locations": [
+            {
+              "path": "errorhandlerError_Handler/0/processors/0",
+              "lineNumber": 9
+            },
+            {
+              "path": "errorhandlerError_Handler/0/processors/1",
+              "lineNumber": 10
+            }
+          ],
+          "coveredLocations": [
+            {
+              "path": "errorhandlerError_Handler/0/processors/0",
+              "lineNumber": 9
+            },
+            {
+              "path": "errorhandlerError_Handler/0/processors/1",
+              "lineNumber": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

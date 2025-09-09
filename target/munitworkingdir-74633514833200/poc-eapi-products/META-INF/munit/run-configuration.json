@@ -1,0 +1,83 @@
+{
+  "runToken": "8adb5c46-456a-4e11-83b3-5a97470909da",
+  "projectName": "poc-eapi-products",
+  "domainLocation": "",
+  "tags": [],
+  "testNames": [],
+  "testNamesWithSuite": [],
+  "suitePaths": [
+    "stock-ImplementationFlow-test-suite.xml",
+    "tax-ImplementationFlow-test-suite.xml",
+    "customer-ImplementationFlow-test-suite.xml",
+    "price-ImplementationFlow-test-suite.xml"
+  ],
+  "allSuitePaths": [
+    "stock-ImplementationFlow-test-suite.xml",
+    "tax-ImplementationFlow-test-suite.xml",
+    "customer-ImplementationFlow-test-suite.xml",
+    "price-ImplementationFlow-test-suite.xml"
+  ],
+  "skipAfterFailure": false,
+  "mmvs": [],
+  "notifierConfigurations": [
+    {
+      "clazz": "org.mule.munit.remote.notifiers.ConsoleNotifier",
+      "parameters": [
+        {
+          "name": "runToken",
+          "type": "java.lang.String",
+          "value": "8adb5c46-456a-4e11-83b3-5a97470909da"
+        }
+      ]
+    }
+  ],
+  "coverageConfiguration": {
+    "runCoverage": true,
+    "randomizeCoveragePort": true,
+    "suitePaths": [
+      "stock-ImplementationFlow-test-suite.xml",
+      "tax-ImplementationFlow-test-suite.xml",
+      "customer-ImplementationFlow-test-suite.xml",
+      "price-ImplementationFlow-test-suite.xml"
+    ],
+    "ignoredFiles": [],
+    "ignoredFlowNames": []
+  },
+  "containerConfiguration": {
+    "value": {
+      "mavenConfiguration": {
+        "settingsXmlFilePath": "C:\\Users\\siva\\AppData\\Local\\Temp\\settings-temp-directory\\a3e0c87f-63e7-4edd-a269-2123d8dd0337.xml",
+        "globalSettingsXmlFilePath": "C:\\AnypointStudio-7.21\\settings.xml",
+        "mavenRepositoryDirectoryPath": "C:\\Users\\siva\\.m2\\repository",
+        "activeProfiles": [],
+        "offlineMode": false,
+        "forcePolicyUpdate": true,
+        "ignoreArtifactDescriptorRepositories": false,
+        "remoteRepositories": [
+          {
+            "id": "mulesoft-releases",
+            "url": "https://repository.mulesoft.org/releases/"
+          },
+          {
+            "id": "central",
+            "url": "https://repo.maven.apache.org/maven2"
+          }
+        ]
+      },
+      "serverPluginConfigurations": [
+        {
+          "groupId": "com.mulesoft.munit.plugins",
+          "artifactId": "munit-coverage-plugin",
+          "version": "3.4.0",
+          "type": "jar",
+          "classifier": "mule-server-plugin"
+        }
+      ],
+      "runtimeId": "4.9.0",
+      "product": "MULE_EE",
+      "munitWorkingDirectoryPath": "C:\\Users\\siva\\AnypointStudio\\studio-workspace\\poc-eapi-products\\target\\munitworkingdir-74633514833200",
+      "log4JConfigurationFilePath": "C:\\Users\\siva\\AnypointStudio\\studio-workspace\\poc-eapi-products\\target\\test-classes\\log4j2-test.xml"
+    }
+  },
+  "clearParameters": false
+}
