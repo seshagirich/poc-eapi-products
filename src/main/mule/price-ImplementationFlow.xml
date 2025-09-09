@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	
+	
+	
+	<flow name="post:\v1\prices:application\json:poc-eapi-products-config">
+        <logger level="INFO" doc:name="startFlow" doc:id="cc246e32-27c8-40cd-abb6-98780ac04b49" message="startFlow"/>
+		<flow-ref doc:name="commanStartLoggerSub_Flow" doc:id="0e6405bd-67b2-4fc7-802f-ed035a5a495b" name="commanStartLoggerSub_Flow"/>
+		<http:request method="POST" doc:name="price-papi-Request" doc:id="5cbf23b8-4830-4242-8bef-3c25ccf457c5" config-ref="HTTP_Request_configuration" path="${papi.price-path}">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	"client_secret" : "222",
+	"client_id" : "111"
+}]]]></http:headers>
+		</http:request>
+		<flow-ref doc:name="commanEndLoggerSub_Flow" doc:id="f2c05b4e-536b-4aa8-84ed-8472f6196ecb" name="commanEndLoggerSub_Flow"/>
+		<logger level="INFO" doc:name="endflow" doc:id="59aff5d4-276a-45a2-bd82-c2fa11802f1d" message="endflow"/>
+		<error-handler ref="errorhandlerError_Handler" />
+    
+</flow>
+	
+	
+	</mule>

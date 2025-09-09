@@ -1,0 +1,27 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  productsDetails:
+    type: array
+    required: false
+    items:
+      type: object
+      properties:
+        price:
+          type: string
+          required: false
+          example: "200"
+        stock_keeping_unit_code:
+          type: string
+          required: false
+          example: "WP1"
+        qty:
+          type: string
+          required: false
+          example: "EACH"
+        productName:
+          type: string
+          required: false
+          example: "bulb"
+
+  
